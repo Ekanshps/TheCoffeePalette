@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# This preview is intentionally noindex. Switch page meta robots to index,follow only after approval and production launch.
+Sitemap: https://thecoffeepalette.epsingh.in/sitemap.xml

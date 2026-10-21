@@ -1,0 +1,2 @@
+# Static HTML/CSS/JavaScript project. No Python packages or Node dependencies are required.
+# Optional for local preview: Python 3.8+ (built-in http.server only).

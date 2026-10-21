@@ -1,0 +1,45 @@
+THE COFFEE PALETTE — REBUILD V2
+================================
+
+WHAT THIS IS
+A static multi-page café website built with semantic HTML, custom CSS, vanilla JavaScript and GSAP/ScrollTrigger loaded from CDN. There is no build step, backend, npm install, or Python package requirement.
+
+PROJECT FILES
+- index.html          Main customer-conversion page
+- menu.html           Searchable and filterable interactive menu; selected dishes can be sent as an enquiry
+- experiences.html    Creative activities / group visit information and enquiry form
+- visit.html          Address, hours, directions, phone, FAQ and map
+- 404.html            Custom branded not-found page
+- assets/styles.css   Full responsive visual system
+- assets/main.js      Navigation, scroll reveals, reviews, FAQs and enquiry handling
+- assets/menu.js      Menu search, category filters, shortlist interactions
+- assets/favicon.svg  Custom palette favicon
+- robots.txt/sitemap.xml and SEO metadata
+- README.md           Detailed project, source and launch notes
+
+RUN LOCALLY
+1. Extract the ZIP.
+2. Open a command prompt in the extracted project directory (the folder that contains index.html).
+3. Run:  py -m http.server 8000
+4. Open: http://localhost:8000
+
+Double-clicking index.html may work too, but using a local server is more reliable for navigation and paths. Internet is required to load Google Fonts, GSAP, the map embed, and third-party café photos.
+
+PREVIEW SUBDOMAIN
+The site is prepared for: https://thecoffeepalette.epsingh.in/
+Upload the contents of this project folder to the public root of the subdomain. Keep the asset folder at /assets/. For Vercel static deploy, the project can be deployed as a static site with no build command and the root directory as the project directory. Configure rewrites so /menu and /experiences are optional clean routes if desired; the supplied links currently use explicit .html paths and work on ordinary static hosting.
+
+BEFORE SHARING WITH THE OWNER
+1. Verify the address, phone, hours, current menu and pricing with the owner. Public listings can become stale.
+2. Verify the WhatsApp number is enabled. The interactive enquiry form uses 91918090753057 in an https://wa.me/ link. If the number is not a WhatsApp contact, change body data-whatsapp attributes and the fallback number in assets/main.js and assets/menu.js, or replace the action with the preferred contact flow.
+3. Confirm rights/permission for the third-party photos and replace any unavailable photos with owner-approved, optimized images. Source/credit links are in README.md. Photos are loaded remotely; they are not bundled in the ZIP.
+4. The current site is intentionally noindex/nofollow because it is a client preview. Do not enable public indexing until the owner approves the content and intended canonical domain is known.
+
+PRODUCTION LAUNCH CHECKLIST
+1. Update canonical URL and og:url from https://thecoffeepalette.epsingh.in to the approved production domain.
+2. Change <meta name="robots" content="noindex, nofollow"> and Googlebot directives to index, follow on each HTML page.
+3. Update sitemap.xml and robots.txt to the production domain; submit sitemap in Google Search Console.
+4. Verify the LocalBusiness schema name, phone, postal address, hours and cuisine details with the owner. Do not add aggregate-rating/review schema for first-party testimonials; Google does not permit self-serving review markup for LocalBusiness.
+5. Add a real booking/enquiry endpoint only if needed. Current enquiry forms open a prefilled WhatsApp message; they do not save leads to a database or confirm appointments.
+6. Test call and directions on iPhone/Android, test 404 behavior on the chosen host, optimize images, and review Lighthouse/Core Web Vitals.
+7. Connect a verified Google Business Profile and Search Console; request indexing after the final site is live. No website can guarantee rankings or beat competitors by technical setup alone.
